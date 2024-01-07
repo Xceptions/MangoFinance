@@ -3,6 +3,7 @@ module mangofinance.com/bank-backend
 go 1.17
 
 require (
+	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/gorilla/mux v1.8.1
 	golang.org/x/crypto v0.17.0
 	gorm.io/driver/postgres v1.5.4

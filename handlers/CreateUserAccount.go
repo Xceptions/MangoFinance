@@ -9,11 +9,12 @@ import (
 	"mangofinance.com/bank-backend/models"
 )
 
+// Receives: response and request writers
 // function receives input from the user containing username, email
 // and password. We then use these values to populate both the
 // user table and account table. The account is generated from the
-// user detail.
-// The return value is a string
+// user detail. It returns the status of the account creation
+// Returns: string
 func (h handler) CreateUserAccount(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	body, err := ioutil.ReadAll(r.Body)
