@@ -47,7 +47,7 @@ func (h handler) LogInUser(w http.ResponseWriter, r *http.Request) {
 
 	tokenString := helpers.GenerateJWT(userInput.Username)
 
-	// Send a 201 created response
+	// Send a 201 response
 	w.Header().Add("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(tokenString)

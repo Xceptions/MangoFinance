@@ -20,6 +20,7 @@ func main() {
 
 	router.HandleFunc("/createuser", h.CreateUserAccount).Methods(http.MethodPost)
 	router.HandleFunc("/login", h.LogInUser).Methods(http.MethodPost)
+	router.HandleFunc("/viewaccount", h.ViewUserAccount).Methods(http.MethodGet)
 
 	log.Println("API is running!")
 	http.ListenAndServe(":4000", router)
